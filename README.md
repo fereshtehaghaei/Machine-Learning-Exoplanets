@@ -10,17 +10,21 @@ Over a period of nine years in deep space, the NASA Kepler space telescope has b
 
 To help process this data, I created machine learning models capable of classifying candidate exoplanets from the raw dataset.
 
-### Preprocessed the Data
+### Preprocessed & Cleaned the Data
 
-* Preprocessed the dataset prior to fitting the model.
+* Data was first read in from a csv file, and null columns and null rolls were dropped. 
 * Performed feature selection and remove unnecessary features.
+* Used `ExtraTreesClassifier()` and stored those top ten features as a series to be used as my `X` values. 
+* The `koi_disposition` column contained the classification values of each exoplanet candidate and would be used as my `y` values.
 * Used `MinMaxScaler` to scale the numerical data.
-* Separated the data into training and testing data.
+* Separated the data into training and testing data.`train_test_split` 
+* This process and method was used for all four models.
 
 ### Tuned Model Parameters
 
 * Used `GridSearch` to tune model parameters.
-* Tuned and compared at least two different classifiers.
+
+  
 
 ### Reporting
 
