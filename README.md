@@ -22,11 +22,21 @@ To help process this data, I created machine learning models capable of classify
 
 ### Tuned Model Parameters
 
-* Used `GridSearch` to tune model parameters.
+* Used `GridSearch` to tune model parameters for all four methods
 
   
 
 ### Reporting
+
+- **KNN**
+  - Used K-Nearest Neighbors to find the best K value. Created a loop to run through a set of possible k values after Comparing the training and testing scores, I found that k=15 was the best value as it had the lowest difference between training and testing scores.
+  - Used classification report to analyze key metrics and it showed the precision (confirmed 0.73, False Positive 0.74 and Candidate 0.98) classified correctly among the class. The score for f1 showing the harmonic mean between precision & recall. The classification report also showed the support number of  (confirmed 411, False Positive 484 and Candidate 853)  which it shows dataset is not very well balanced.
+  - Saved the model using joblib
+
+- **Logistic Regression**
+  - Used LogisticRegression() model and used training data to for model fitting. After using the scored the model using training and testing scores, both sets scored well, with training data 82% and testing data 81.9%
+  - Used **Hyperparameter Tuning** by using `GridSearchCV` to tune the parameters further more. Changed 'C' and 'max_iter' values and found that 65 is the best value for 'C' and 100 is the best for 'max_iter' and got the score model of 85% 
+  - Saved the model using joblib
 
 
 
