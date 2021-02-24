@@ -40,7 +40,6 @@ To help process this data, I created machine learning models capable of classify
 
 - Used **Hyperparameter Tuning** by using `GridSearchCV` to tune the parameters further more. Changed 'C' and 'max_iter' values and found that 65 is the best value for 'C' and 100 is the best for 'max_iter' and got the score model of 85% 
 
-  
 
 
 **(3) Random Forest**
@@ -48,15 +47,12 @@ To help process this data, I created machine learning models capable of classify
 - Used RandomForest() model and used training data to for model fitting and set the number of trees to 200 (n_estimators =200), both sets scored well, with training data 100% and testing data 89%
 - Used **Hyperparameter Tuning** by using `GridSearchCV` to tune the parameters further more. Changed number of tress ('n_estimators') and 'max_depth' values and found that 15 is the best value for 'max_depth' and 700 is the best for 'n_estimator' and got the score model of 89% which there was no significant improvement from the original model.
 
-
-
 **(4) SVM**
 
 - Used SVC() model and set the kernel to linear, used training data to for model fitting and set the number of trees to 200 (n_estimators =200), both sets scored well, with training data 80% and testing data 80%
 
 - Used **Hyperparameter Tuning** by using `GridSearchCV` , I explored various C values, gamma values, and linear and rbf kernels. After training the new model, accuracy increased to 85% and linear kernel and 'C' value of 50 were the best parameters.
 
-  
 
 
 **(5) TensorFlow (Deep-Learning)**
